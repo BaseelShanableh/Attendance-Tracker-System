@@ -12,8 +12,6 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-   
-
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -84,8 +82,8 @@
       border-radius: 5px;
       cursor: pointer;
       font-size: 16px;
-      float:right;
-      margin-bottom:5px;
+      float: right;
+      margin-bottom: 5px;
     }
 
     #toggleFormBtn:hover,
@@ -104,13 +102,29 @@
       width: 100%;
       box-sizing: border-box;
     }
-    #pageTitle {
-  color: #fff;
-  border-bottom: 2px solid #fff;
-  padding-bottom: 5px;
-  text-align: left;
-}
 
+    #pageTitle {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 5px;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+
+      /* Adjust styles for smaller screens */
+      #toggleFormBtn,
+      #createTrainerBtn {
+        width: 100%;
+        float: none;
+      }
+
+      #trainersTable th,
+      #trainersTable td {
+        padding: 5px;
+        font-size: 12px;
+      }
+    }
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -141,7 +155,6 @@
             </svg>
           </a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" onclick="Navigate('MainPage')">
             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="home" role="img"
@@ -156,7 +169,6 @@
             <span class="link-text">Home</span>
           </a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" onclick="Navigate('trainee')">
             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="user" role="img"
@@ -170,7 +182,6 @@
             <span class="link-text">Trainees</span>
           </a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" onclick="Navigate('trainers')">
             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="user" role="img"
@@ -181,11 +192,9 @@
                   class="fa-secondary"></path>
               </g>
             </svg>
-
             <span class="link-text">Trainers</span>
           </a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" onclick="Navigate('feedback')">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-alt" role="img"
@@ -197,7 +206,6 @@
             <span class="link-text">Feedback</span>
           </a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" onclick="Navigate('profile')">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img"
@@ -209,7 +217,6 @@
             <span class="link-text">Profile</span>
           </a>
         </li>
-
         <li class="nav-item" id="themeButton">
           <a class="nav-link" onclick="Navigate('login')">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-alt" role="img"
@@ -226,16 +233,18 @@
   </header>
   <div class="container">
     <h1 id="pageTitle">Trainer List</h1>
-
     <button id="toggleFormBtn" class="btn">Add Trainer</button>
-    <div id="trainerForm" style="display: none;">
-      <input type="text" id="nameInput" placeholder="Name">
-      <input type="email" id="emailInput" placeholder="Email">
-      <input type="password" id="passwordInput" placeholder="Password">
-      <br><br>
-      <button id="createTrainerBtn" class="btn">Create</button>
+    <div id="trainerForm" style="display: none; text-align: center; padding: 20px;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <input type="text" id="nameInput" placeholder="Enter your name"
+          style="margin-bottom: 10px; padding: 8px; width: 50%;">
+        <input type="email" id="emailInput" placeholder="Enter your email"
+          style="margin-bottom: 10px; padding: 8px; width: 50%;">
+        <input type="password" id="passwordInput" placeholder="Enter your password"
+          style="margin-bottom: 20px; padding: 8px; width: 50%;">
+        <button id="createTrainerBtn" class="btn" style="padding: 10px 20px;">Create</button>
+      </div>
     </div>
-    
     <table id="trainersTable">
       <thead>
         <tr>
@@ -249,9 +258,7 @@
       </tbody>
     </table>
     <br><br>
-   
   </div>
-
 </body>
 <script src="Navigator.js"></script>
 <script src="trainers.js"></script>
