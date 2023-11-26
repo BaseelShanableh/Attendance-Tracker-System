@@ -4,16 +4,16 @@ const totalSlides = slides.length;
 const buttons = document.querySelectorAll('.img-btn');
 const textContents = [
     {
-        title: 'Efficient Assignment Management',
-        description: 'Streamline assignment tracking and grading effortlessly. Manage tasks and monitor trainee progress efficiently, ensuring seamless communication and feedback.'
+        title: 'New Breakthrough in Artificial Intelligence',
+        description: 'Scientists announce a major advancement in AI technology, bringing us closer to creating machines with human-like intelligence.'
     },
     {
-        title: 'Seamless Attendance Recording',
-        description: 'Take attendance hassle-free. Our intuitive system allows quick and accurate recording of trainees attendance, providing you with the tools to optimize training sessions.'
+        title: 'Latest Cybersecurity Measures Unveiled',
+        description: 'A comprehensive set of cybersecurity measures is introduced to combat the rising threats in the digital landscape.'
     },
     {
-        title: 'Comprehensive Trainee Progress Tracking',
-        description: 'Track and assess trainee performance comprehensively. Dive into detailed analytics to monitor growth, identify areas for improvement, and provide tailored support.'
+        title: 'Revolutionary Tech Startup Raises $50 Million in Funding',
+        description: 'A promising tech startup secures a significant funding round to accelerate the development of its groundbreaking products.'
     }
 ];
 
